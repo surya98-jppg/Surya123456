@@ -40,3 +40,41 @@ class Main {
         
     }
 }
+# count digits in a number
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int count=0;
+        System.out.println("enter a number to count digits");
+        int number=sc.nextInt();
+        int temp=number;
+        int digit=0;
+        while(temp>0){
+            digit=temp%10;
+            count+=1;
+            temp=temp/10;
+        }
+        System.out.println(count);
+        System.out.println(digit);
+
+    }
+}
+# list elements in runtime 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers=new ArrayList<>();
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the size of the list");
+        int size=sc.nextInt();
+        System.out.println("enter the lsit elments");
+        for(int i=0;i<size;i++){
+            int e=sc.nextInt();
+            numbers.add(e);
+        }
+        System.out.println(numbers);
+        System.out.println(numbers.size());
+    }
+    
+}

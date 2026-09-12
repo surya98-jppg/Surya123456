@@ -78,3 +78,25 @@ class Main {
     }
     
 }
+# factoial of a number
+import java .util.*;
+class Main {
+    public static void main(String[] args) {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("enter how many you want");
+    int n=sc.nextInt();
+    while(n>0){
+    System.out.println("enter the number");
+        int N=sc.nextInt();
+        int original=N;
+        int fact=1;
+        while (N>0){
+            fact=fact*N;
+            N--;        
+        }
+        System.out.println("factorial of "+original +"is"+fact);
+      n--;      
+    }
+    sc.close();
+    }
+}

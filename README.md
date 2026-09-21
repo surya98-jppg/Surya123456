@@ -160,3 +160,4 @@ class Main {
       
     }
 }
+# Must use sc.nextLine if you are using sting input after int

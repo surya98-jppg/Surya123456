@@ -134,3 +134,29 @@ class Main {
         System.out.println(commonelements);
     }
 }
+# 2-D matrix 
+import java.util.*;
+class Main {
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the rows and cols of the matrix");
+        int rows=sc.nextInt();
+        int cols=sc.nextInt();
+      int[][]arrr=new int[rows][cols];
+        System.out.println("enter the rows*cols elments");
+        for(int i=0;i<rows;i++){
+            for(int j=0;j<cols;j++){
+                arrr[i][j]=sc.nextInt();
+                
+            }}
+         System.out.println(" the matrix is");
+         for(int i=0;i<rows;i++){
+             for(int j=0;j<cols;j++){
+                 System.out.println(arrr[i][j] + " ");
+             }
+              System.out.println();
+         }        
+      
+    }
+}

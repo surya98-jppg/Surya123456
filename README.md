@@ -161,3 +161,23 @@ class Main {
     }
 }
 # Must use sc.nextLine if you are using sting input after int
+# count even and odd do not use array if we only need count
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the lenght of the array");
+        int s=sc.nextInt();
+        
+        int count_even=0;
+        System.out.println("enter the element of the array");
+        for(int i=0;i<s;i++){
+         int n=sc.nextInt();
+            if (n%2==0){
+                count_even+=1;
+            }
+        }
+        int count_odd=s-count_even;       
+        System.out.println("count of even_numbers is " + count_even);
+        System.out.println("count of odd numbers is " + count_odd);
+    }}

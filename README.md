@@ -181,3 +181,41 @@ class Main {
         System.out.println("count of even_numbers is " + count_even);
         System.out.println("count of odd numbers is " + count_odd);
     }}
+# PERFECT NUMBER
+class Main {
+    public static void main(String[] args) {
+     int n=5;
+     long sum=1;
+        for(int i=2;i*i<=n;i++){
+            if(n%i==0){
+                sum+=i;
+            }
+            if(i*i!=n){
+                sum+=n/i;
+            }
+        }
+        if(sum==n){
+            System.out.println("it is a perfect number");
+        }
+        else{
+            System.out.println("Not a perfect number");
+        }
+    }
+}
+# Reversin an array
+class Main {
+    public static void main(String[] args) {
+     int[]arr={1,2,3,4,5};
+     int left=0;
+     int right=arr.length-1;
+     int temp;
+    while(left<right){
+        temp=arr[left];
+        arr[left]=arr[right];
+        arr[right]=temp;
+        left++;
+        right--;}
+        for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i] + " ");
+        }
+    }}

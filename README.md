@@ -219,3 +219,59 @@ class Main {
             System.out.print(arr[i] + " ");
         }
     }}
+# remove duplicates from array
+# if it is sorted(upto insertindex-1 all are unique elemnts)(in place approach)
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      int[]arr={1,2,3,4,4,5,5};
+        int insertIndex=1;
+        for(int i=1;i<arr.length;i++){
+            if(arr[i]!=arr[i-1]){
+                arr[insertIndex]=arr[i];
+                insertIndex++;
+            }
+        }
+        int[]arrr=Arrays.copyOf(arr,insertIndex);
+        System.out.println(Arrays.toString(arrr));
+    }
+}
+# using set to remove duplicates if insertion order is mater
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      int[]arr={1,2,3,4,4,5,5};
+        Set<Integer>set=new LinkedHashSet<>();
+        for(int num:arr){
+            set.add(num);
+        }
+    // conversion of set to array
+    int[]result=new int[set.size()];
+    int index=0;
+    for(int nums:set){
+       result[index]=nums;
+       index++;
+    }
+   System.out.println(Arrays.toString(result));
+}}
+# frequency  count (traditonal approach)
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+      int[]arr={1,2,3,4,4,5,5};
+        Map<Integer,Integer>map=new HashMap<>();
+        for(int num:arr){
+            if(map.containsKey(num)){
+              map.put(num,map.get(num)+1);
+            }
+           else{
+               map.put(num,1);
+           }
+    }
+    System.out.println(map);
+}}
+# standard java approach
+for (int num : arr) {
+            // If num exists, increment count by 1. If not, start at 0 + 1.
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
+        }

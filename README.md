@@ -275,3 +275,32 @@ for (int num : arr) {
             // If num exists, increment count by 1. If not, start at 0 + 1.
             frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
+# Methods in Java
+import java.util.*;
+class Main {
+    public static int  Addition(int a , int b){
+      return a+b;
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the first number");
+        int num1=sc.nextInt();
+        System.out.println("enter the second number");
+        int num2=sc.nextInt();
+        int result=Addition(num1,num2);
+        System.out.println(result);
+        
+    }
+}
+# without return type and with arguements
+import java.util.*;
+class Main {
+    public static void Addition(int a , int b){
+        int result=a+b;
+      System.out.println(result);
+    }
+    public static void main(String[] args) {
+       Addition(3,4);
+        
+    }
+}

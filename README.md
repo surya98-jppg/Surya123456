@@ -304,3 +304,34 @@ class Main {
         
     }
 }
+# check to prime no or not (optimized approach )(trial division (6k+1)(after 3 prime numbers can be represented in that form)
+import java.util.*;
+class Main{
+public static boolean IsPrimeOrNot(int a ){
+    if(a<=1){
+    return false;
+    }
+   if(a==2 || a==3){
+       return true;
+   }
+  if(a%2==0 || a%3==0){
+      return false;
+  }
+  
+  for(int i=5;i*i<=a;i+=6){
+      if(a%i==0 || a%(i+2)==0){
+          return false;
+      }
+  }
+  return true;
+}
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter a number");
+        int n=sc.nextInt();
+        boolean result=IsPrimeOrNot(n);
+        System.out.println(result);
+        
+    }
+
+}

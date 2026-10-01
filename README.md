@@ -335,3 +335,22 @@ public static boolean IsPrimeOrNot(int a ){
     }
 
 }
+# Arraylist to array
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+   ArrayList<Integer>list=new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(2,3);
+        Integer[]arr=list.toArray(new Integer[0]);
+        System.out.println(Arrays.toString(arr));
+}}
+# Array to ArrayList
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+     Integer[]arr={1,2,3,4,5};
+           List<Integer> list=Arrays.asList(arr);
+        System.out.println(list);
+    }}

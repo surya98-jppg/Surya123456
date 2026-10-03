@@ -354,3 +354,37 @@ class Main {
            List<Integer> list=Arrays.asList(arr);
         System.out.println(list);
     }}
+# queue implemntation using linkedList
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+     Queue<Integer>queue=new LinkedList<>();
+        queue.offer(12);
+        queue.offer(13);
+        queue.offer(45);
+       System.out.println( queue.peek());
+        int removed=queue.poll();
+        System.out.println(removed);
+       int removed2=queue.remove();  //throws an exception
+        System.out.println(removed2);
+      System.out.println(queue.element()); // throws an exception
+    }
+}
+# Stack 
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+     Stack<Integer>stack=new Stack<>();
+        stack.push(12);
+        stack.push(2);
+        stack.push(33);
+        System.out.println(stack.peek());
+        System.out.println(stack.size());
+        stack.pop();
+        System.out.println(stack.search(2)); //return -1 or 0
+        stack.pop();
+        System.out.println(stack.pop());
+        if(stack.isEmpty()){
+            System.out.println("stack is nill");
+        }}
+}

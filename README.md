@@ -435,6 +435,36 @@ public void  AddFirst(String data){
          current=current.next;
      }
  }
+ public void DeleteFirst{
+    if(head==null){
+        System.out.println("List is empty");
+        return;
+    }
+    size--;
+    head=head.next;
+}
+public void DeleteLast{
+    if(head==null){
+        System.out.println("list is empty");
+        return;
+        
+    }
+    size--;
+    if(head.next==null){//when list only one node
+        head=null;
+        return ;
+    }
+    Node secondLast=head;
+    Node LastNode=head.next;
+    while(LastNode.next!=null){
+      LastNode=LastNode.next;
+        secondLast=secondLast.next
+    }
+    secondLast.next=null;
+}
+public int getSize(){
+    return size;
+}
     public static void main(String[] args) {
     LL list=new LL();
         list.AddFirst("surya");
@@ -442,5 +472,7 @@ public void  AddFirst(String data){
         list.AddFirst("b.tech");
         list.AddLast("studing");
         list.PrintList();
+        listt.deleteFirst();
+        sos(list.size());
     }
 }

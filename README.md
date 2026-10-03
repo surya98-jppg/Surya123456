@@ -388,3 +388,59 @@ class Main {
             System.out.println("stack is nill");
         }}
 }
+# Linked List
+class LL{
+    Node head;
+    private int size;
+    LL(){
+        size=0;
+    }
+    public class Node{
+        String data;
+        Node next;
+    Node(String data){
+        this.data=data;
+        this.next=null;
+        size++;
+    }
+    }
+public void  AddFirst(String data){
+    Node newNode =new Node(data);
+   if(head==null){
+       head = newNode;
+     return;   }
+    newNode.next=head;
+    head=newNode;
+}
+  public void AddLast(String data){
+      Node newNode=new Node(data);
+      if(head==null){
+          head=newNode;
+          return;
+      }
+      Node current=head;
+      while(current.next!=null){
+          current=current.next;
+      }
+      current.next=newNode;
+      
+  }
+ public void PrintList(){
+     if(head==null){
+         System.out.print("List is empty");
+     }
+     Node current=head;
+     while(current!=null){
+         System.out.print(current.data+"->");
+         current=current.next;
+     }
+ }
+    public static void main(String[] args) {
+    LL list=new LL();
+        list.AddFirst("surya");
+        list.AddFirst("prakash");
+        list.AddFirst("b.tech");
+        list.AddLast("studing");
+        list.PrintList();
+    }
+}

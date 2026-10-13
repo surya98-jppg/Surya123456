@@ -476,3 +476,10 @@ public int getSize(){
         sos(list.size());
     }
 }
+# swapping in list
+temp=a.get(i);
+        a.set(i,a.get(j));
+        a.set(j,temp);
+        i++;
+        j--;
+        ;

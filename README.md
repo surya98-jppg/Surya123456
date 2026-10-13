@@ -483,3 +483,4 @@ temp=a.get(i);
         i++;
         j--;
         ;
+# when we want to interate through the String we will convert that string into charArray and at alst we convert the resulting stack or anything using StringBuilder
